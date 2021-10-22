@@ -26,5 +26,19 @@ public class SortTest {
         assertArrayEquals(sorted.toArray(),expected);
         sorted.forEach(System.out::println);
     }
+    @Test
+    public void mergeSort() throws Exception {
+        MergeSort<Integer> sort = new MergeSort<>();
+        List<Integer> sorted=sort.sort(Arrays.asList(unsorted));
+        assertArrayEquals(sorted.toArray(),expected);
+        sorted.forEach(System.out::println);
+    }
+    @Test
+    public void quickSort() throws Exception{
+        QuickSort<Integer> sort = new QuickSort<>();
+        List<Integer> sorted=sort.sort(Arrays.asList(unsorted));
+        assertArrayEquals(sorted.toArray(),expected);
+        sorted.forEach(System.out::println);
 
+    }
 }
