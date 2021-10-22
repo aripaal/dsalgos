@@ -1,7 +1,6 @@
 package sorting;
 
 import org.junit.*;
-import search.*;
 
 import java.util.*;
 
