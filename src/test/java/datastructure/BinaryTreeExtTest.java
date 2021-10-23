@@ -39,4 +39,12 @@ public class BinaryTreeExtTest {
         assertArrayEquals(output.toArray(), expectedInOrder);
         System.out.println(output);
     }
+    @Test
+    public void testLevelorder() {
+        List<Integer> output = new LinkedList<>();
+        tree.levelOrder(output);
+        assertArrayEquals(output.toArray(), expectedLevelOrder);
+        System.out.println(output);
+    }
+
 }

@@ -50,4 +50,23 @@ public class BinaryTreeExt<T extends Comparable<T>> extends BinaryTree<T> {
             }
         }
     }
+
+    public void levelOrder(List<T> view) {
+        if (root == null)
+            return;
+        levelOrder(view, root);
+    }
+
+    private void levelOrder(List<T> view, Node<T> cursor) {
+        Queue<Node<T>> queue = new LinkedList<>();
+        queue.offer(cursor);
+        while (!queue.isEmpty()) {
+            Node<T> temp = queue.poll();
+            view.add(temp.value);
+            if (temp.left != null)
+                queue.offer(temp.left);
+            if (temp.right != null)
+                queue.offer(temp.right);
+        }
+    }
 }
