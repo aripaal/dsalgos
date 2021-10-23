@@ -27,21 +27,21 @@ public class BinaryTreeExtTest {
 
     @Test
     public void testPreorder() {
-        List<Integer> output = new LinkedList<>();
+        java.util.List<Integer> output = new java.util.LinkedList<>();
         tree.preOrder(output);
         assertArrayEquals(output.toArray(), expectedPreOrder);
         System.out.println(output);
     }
     @Test
     public void testInorder() {
-        List<Integer> output = new LinkedList<>();
+        java.util.List<Integer> output = new java.util.LinkedList<>();
         tree.inOrder(output);
         assertArrayEquals(output.toArray(), expectedInOrder);
         System.out.println(output);
     }
     @Test
     public void testLevelorder() {
-        List<Integer> output = new LinkedList<>();
+        java.util.List<Integer> output = new java.util.LinkedList<>();
         tree.levelOrder(output);
         assertArrayEquals(output.toArray(), expectedLevelOrder);
         System.out.println(output);

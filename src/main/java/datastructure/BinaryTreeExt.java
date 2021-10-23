@@ -14,7 +14,7 @@ public class BinaryTreeExt<T extends Comparable<T>> extends BinaryTree<T> {
     }
 
     private void preOrder(List<T> view, Node<T> cursor) {
-        Stack<Node<T>> stack = new Stack<>();
+        java.util.Stack<Node<T>> stack = new java.util.Stack<>();
         stack.push(cursor);
         while (!stack.isEmpty()) {
             Node<T> temp = stack.pop();
@@ -37,7 +37,7 @@ public class BinaryTreeExt<T extends Comparable<T>> extends BinaryTree<T> {
     }
 
     public void inOrder(List<T> view, Node<T> cursor) {
-        Stack<Node<T>> stack = new Stack<>();
+        java.util.Stack<Node<T>> stack = new java.util.Stack<>();
         Node<T> temp = cursor;
         while (!stack.isEmpty() || temp != null) {
             if (temp != null) {
@@ -58,7 +58,7 @@ public class BinaryTreeExt<T extends Comparable<T>> extends BinaryTree<T> {
     }
 
     private void levelOrder(List<T> view, Node<T> cursor) {
-        Queue<Node<T>> queue = new LinkedList<>();
+        java.util.Queue<Node<T>> queue = new java.util.LinkedList<>();
         queue.offer(cursor);
         while (!queue.isEmpty()) {
             Node<T> temp = queue.poll();
