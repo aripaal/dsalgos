@@ -22,16 +22,18 @@ public class QuickSelect<T extends Comparable<T>> {
 
     private int getPivot(int start, int end) {
         int first = start;
-        int median = (start + end) / 2;
-        swap(median, end);
+        int pivot = (start + end) / 2;
+        //move pivot to end of the list
+        swap(pivot, end);
 
+        // compare with the pivot value
         for (int i = first; i < end; i++) {
             if (unsortedList.get(i).compareTo(unsortedList.get(end)) > 0) {
                 swap(i, first);
-                ;
                 first++;
             }
         }
+        //swap with the pivot value
         swap(first, end);
         return first;
     }
