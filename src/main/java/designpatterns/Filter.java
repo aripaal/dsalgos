@@ -16,7 +16,7 @@ public class Filter {
                 new Employee(20, "Aman", Sex.M));
 
         Females f = new Females();
-        List<Employee> employeeList = f.filter(employees);
+        List<Employee> employeeList = f.criteria(employees);
         System.out.println(employeeList);
     }
 }
@@ -32,12 +32,12 @@ class Employee {
 enum Sex {M, F};
 
 interface Criteria {
-    List<Employee> filter(List<Employee> employees);
+    List<Employee> criteria(List<Employee> employees);
 }
 
 class Females implements Criteria {
     @Override
-    public List<Employee> filter(List<Employee> employees) {
+    public List<Employee> criteria(List<Employee> employees) {
         return employees
                 .stream()
                 .filter(e -> e.sex == Sex.F)
