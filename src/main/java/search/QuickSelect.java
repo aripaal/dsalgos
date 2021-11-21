@@ -39,6 +39,7 @@ public class QuickSelect<T extends Comparable<T>> {
 
     private T select(int k, int start, int end) {
         int pivot = getPivot(start, end);
+        //Binary search like behaviour below
         if (k < pivot) {
             select(k, 0, pivot - 1);
         } else if (k > pivot) {
@@ -48,6 +49,7 @@ public class QuickSelect<T extends Comparable<T>> {
         return unsortedList.get(k);
     }
 
+    //Kth largest or smallest
     public T select(int k) {
         return select(k - 1, 0, unsortedList.size() - 1);
     }
