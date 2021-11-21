@@ -36,11 +36,12 @@ public class BinaryTreeExt<T extends Comparable<T>> extends BinaryTree<T> {
         inOrder(view, root);
     }
 
+    //left - root - right
     public void inOrder(List<T> view, Node<T> cursor) {
         java.util.Stack<Node<T>> stack = new java.util.Stack<>();
         Node<T> temp = cursor;
         while (!stack.isEmpty() || temp != null) {
-            if (temp != null) {
+            if (temp != null) { //Push all till temp.left == null
                 stack.push(temp);
                 temp = temp.left;
             } else {
