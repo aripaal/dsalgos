@@ -20,10 +20,9 @@ public class QuickSelect<T extends Comparable<T>> {
         unsortedList.set(indx2, temp);
     }
 
-    private int getPivot(int start, int end) {
-        int first = start;
-        int pivot = (start + end) / 2;
-        //move pivot to end of the list
+    private int getPivot(int first, int end) {
+        int pivot = (first + end) / 2;
+        //move actual pivot to end of the list
         swap(pivot, end);
 
         // compare with the pivot value
